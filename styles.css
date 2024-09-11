@@ -1,0 +1,135 @@
+:root {
+    --main-body-bg-color: #efefef;
+    --calculated-numbers-color: #7f5af0;
+    --submit-btn-color: #2cb67d;
+    --main-app-bg-color: #fff;
+    --error-msg-color: #ef4565;
+    --main-font-color: #000;
+    --main-submit-btn-color: #ff8906;
+    --font-family: "Poppins", sans-serif;
+    --btn-font-color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--main-body-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: var(--font-family, sans-serif), serif;
+}
+
+.main-container {
+    background-color: var(--main-app-bg-color);
+    color: var(--main-font-color);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2rem;
+    max-width: 70%;
+    width: 60rem;
+    font-size: 2rem;
+    border-radius: 2rem 2rem 10rem 2rem;
+    margin: 3rem 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+
+label {
+    display: block;
+    color: hsl(0, 0%, 70%);
+}
+
+.dob-field {
+    z-index: 1;
+}
+
+.dob-field-set {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-content: center;
+    border: none;
+    gap: 1rem;
+}
+
+input {
+    width: 100%;
+    display: block;
+    font-size: 3.2rem;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    color: hsl(0, 1%, 44%);
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.calculated-age {
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: -2rem 0;
+}
+
+hr {
+    z-index: 1;
+}
+
+.calculated-age-holder {
+    display: none;
+    z-index: 1;
+}
+
+.calc-num {
+    color: var(--calculated-numbers-color);
+    margin-right: 1rem;
+    font-size: 6rem;
+}
+
+.btn {
+    font-size: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: var(--main-font-color);
+    font-family: inherit;
+    padding: 0.5rem 0;
+    border: 1px solid hsl(0, 0%, 86%);
+    background-color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: var(--calculated-numbers-color);
+    color: var(--btn-font-color)
+}
+
+.error-msg {
+    color: var(--error-msg-color);
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+

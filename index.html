@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="dob-field">
+      <form class="dob-form">
+        <h2 class="title">Age Calculator</h2>
+        <fieldset class="dob-field-set">
+          <label for="month-id">MONTH<input type="number" id="month-id" name="month" min="1" max="12" required></label>
+          <label for="day-id">DAY<input type="number" id="day-id" name="day" min="1" max="32" required></label>
+          <label for="year-id">YEAR<input type="number" id="year-id" name="year"
+                                          title="please enter year in 4 digit format (yyyy)"
+                                          required></label>
+        </fieldset>
+        <button class="btn submit-btn" type="submit">Calculate</button>
+      </form>
+    </div>
+    <hr>
+    <span class="error-msg"></span>
+    <div class="calculated-age-holder">
+      <p class="calculated-age"><span class="calc-num" id="num-year-old">00</span>years</p>
+      <p class="calculated-age"><span class="calc-num" id="num-month-old">00</span>months</p>
+      <p class="calculated-age"><span class="calc-num" id="num-day-old">00</span>days</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
